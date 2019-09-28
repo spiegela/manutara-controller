@@ -1,0 +1,19 @@
+version: "2"
+domain: manutara.org
+repo: github.com/manutara/manutara
+resources:
+- group: manutara
+  version: v1
+  kind: Service
+- group: manutara
+  version: v1
+  kind: Mutation
+- group: manutara
+  version: v1
+  kind: Query
+- group: manutara
+  version: v1
+  kind: Subscription
+- group: manutara
+  version: v1
+  kind: DataType

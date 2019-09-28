@@ -1,0 +1,7 @@
+apiVersion: manutara.manutara.org/v1
+kind: DataType
+metadata:
+  name: datatype-sample
+spec:
+  # Add fields here
+  foo: bar

@@ -1,0 +1,7 @@
+apiVersion: manutara.manutara.org/v1
+kind: Mutation
+metadata:
+  name: mutation-sample
+spec:
+  # Add fields here
+  foo: bar
