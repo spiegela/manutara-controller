@@ -2,14 +2,8 @@ package api
 
 // Client returns an interface for the manutara clientset
 type Client interface {
-	// Mutations returns a REST client for managing mutation resources
-	Mutations(ns string) Mutations
-
-	// Queries returns a REST client for managing query resources
-	Queries(ns string) Queries
-
-	// Subscription returns a REST client for managing subscription resources
-	Subscriptions(ns string) Subscriptions
+	// Fields returns a REST client for managing mutation resources
+	Fields(ns string) Fields
 
 	// Services returns a REST client for managing service resources
 	Services(ns string) Services

@@ -31,26 +31,26 @@ type DataTypeSpec struct {
 // DataTypeFields is a named list of fields used in a query
 type DataTypeFields map[string]DataTypeField
 
-type DataTypeFieldType string
+type DataTypeBasicFieldType string
 
 const (
 	// DataTypeFieldID is a GraphQL ID data type
-	DataTypeFieldID DataTypeFieldType = "ID"
+	DataTypeIDField DataTypeBasicFieldType = "ID"
 
 	// DataTypeFieldString is a GraphQL String data type
-	DataTypeFieldString DataTypeFieldType = "String"
+	DataTypeStringField DataTypeBasicFieldType = "String"
 
 	// DataTypeFieldInt is a GraphQL Int data type
-	DataTypeFieldInt DataTypeFieldType = "Int"
+	DataTypeIntField DataTypeBasicFieldType = "Int"
 
 	// DataTypeFieldFloat is a GraphQL Float data type
-	DataTypeFieldFloat DataTypeFieldType = "Float"
+	DataTypeFloatField DataTypeBasicFieldType = "Float"
 
 	// DataTypeFieldBoolean is a GraphQL Boolean data type
-	DataTypeFieldBoolean DataTypeFieldType = "Boolean"
+	DataTypeBooleanField DataTypeBasicFieldType = "Boolean"
 
 	// DataTypeFieldDate is a GraphQL Date data type
-	DataTypeFieldDate DataTypeFieldType = "Date"
+	DataTypeDateField DataTypeBasicFieldType = "Date"
 )
 
 // DataTypeFieldUnionType is a list of types that are valid as values for a
@@ -65,20 +65,20 @@ type DataTypeField struct {
 	// Description is the user presented short description of the field
 	Description string `json:"description"`
 
-	// Type is the data type of the field. If the field references a user
+	// BasicType is the data type of the field. If the field references a user
 	// defined type, such as an interface or a GraphQL Data Type, this should be
 	// empty
-	Type DataTypeFieldType `json:"type"`
+	BasicType DataTypeBasicFieldType `json:"type"`
 
 	// UserDefinedType is a type that is defined within the GraphQL schema and
 	// should either be an DataType name or an interface
 	UserDefinedType string `json:"userDefinedType"`
 
 	// UnionType is a list of types that are valid for for this field
-	UnionType DataTypeFieldUnionType `json:"union"`
+	//UnionType DataTypeFieldUnionType `json:"union"`
 
 	// EnumType is a list of valid values that are valid for for this field
-	EnumType DataTypeFieldEnumType `json:"enum"`
+	//EnumType DataTypeFieldEnumType `json:"enum"`
 
 	// IsList specifies if this type is a list of objects
 	IsList bool `json:"isList"`

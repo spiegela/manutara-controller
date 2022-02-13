@@ -35,23 +35,16 @@ func NewForConfig(c *rest.Config) (*Client, error) {
 	return &Client{restClient: client}, nil
 }
 
-// Mutations returns a client for mutation resources
-func Mutations(ns string) api.Mutations {
-	return &MutationsClient{
+// Fields returns a client for mutation resources
+func Fields(ns string) api.Fields {
+	return &FieldsClient{
 		namespace: ns,
 	}
 }
 
-// Queries returns a client for query resources
-func Queries(ns string) api.Queries {
-	return &QueriesClient{
-		namespace: ns,
-	}
-}
-
-// Subscriptions returns a client for subscription resources
-func Subscriptions(ns string) api.Subscriptions {
-	return &SubscriptionsClient{
+// DataTypes returns a client for mutation resources
+func DataTypes(ns string) api.DataTypes {
+	return &DataTypesClient{
 		namespace: ns,
 	}
 }
